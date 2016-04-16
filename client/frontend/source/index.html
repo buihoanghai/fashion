@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html >
+<html ng-app="app" ng-controller="app.appController">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=0.8">
@@ -11,6 +11,10 @@
   @@include('grunt_assets/index.scripts.header.html')
 </head>
 <body>
+
+ <div class="container">
+    <div ui-view="main"></div>
+  </div>
   @@include('grunt_assets/index.scripts.footer.html')
 </body>
 </html>

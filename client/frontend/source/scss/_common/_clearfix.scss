@@ -1,0 +1,40 @@
+@mixin clearfix {
+    *zoom: 1;
+
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin vertical-middle() {
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+@mixin rounded($radius: 0.5em) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+ 
+.clear-float {
+    &:before, :after {
+        content: " ";
+    }
+
+    &:after {
+        display: block;
+        content: ".";
+        clear: both;
+        font-size: 0;
+        line-height: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}

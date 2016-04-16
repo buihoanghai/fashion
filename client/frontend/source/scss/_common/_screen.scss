@@ -1,0 +1,16 @@
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1300px;
+$min-width: 'only screen and (min-width :';
+$media-xs: "#{$min-width}#{$screen-xs})";
+$media-sm: "#{$min-width}#{$screen-sm})";
+$media-md: "#{$min-width}#{$screen-md})";
+$media-lg: "#{$min-width}#{$screen-lg})";
+
+/* Example
+.list-tiles {
+    @media #{$media-xs} {
+        width: 425px;
+    }
+}*/

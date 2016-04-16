@@ -1,7 +1,43 @@
 @charset "UTF-8";
 
+$primary-color: #008FAD;
+$secondary-color: #DE6773;
+$link-color: #052B33;
+$success-color: #746456;
+$alert-color: #F00;
+$grey-color: #f1f1f1;
+$red_color: #fe5621;
+$white_color: #ffffff;
+$disable_color: #6D6D6D;
+$button-font-color: #fff;
+$input-prefix-background-color: #f1f1f1;
+$container-background-color: darkslategrey;
+$body-background-color: #fff;
+$body-font-color: #99a4ab;
+$body-border-color: #d5d5d5;
+$content-background-color: #fff;
+
+$font-family: 'Roboto', "Georgia", serif;
+$alt-font-family: "PT Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 
 
- 
+  @import "_common/_clearfix.scss";
+ @import "_common/_functions.scss";
+ @import "_common/_normalize.scss";
+ @import "_common/_screen.scss";
+ @import "_common/a.scss";
+ @import "_common/body.scss";
+ @import "_common/button.scss";
+ @import "_common/container.scss";
+ @import "_common/hidden.scss";
+ @import "_common/i18n-highlight.scss";
+ @import "_common/img.scss";
+ @import "_common/input-prefix.scss";
+ @import "_common/input-suffix.scss";
+ @import "_common/input.scss";
+ @import "_common/label.scss";
+ @import "_common/translate-cloak.scss";
+ @import "font-awesome/font-awesome.scss";
+
   
  

@@ -1,0 +1,6 @@
+﻿
+ <% scssfolder.forEach( function ( file ) { %> @import "<%= file %>";
+<% }); %>
+  <% appfolder.forEach( function ( file ) { %> @import "../<%= file %>";
+<% }); %>
+ 

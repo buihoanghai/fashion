@@ -16,7 +16,7 @@
     return directive;
 
     function link(scope, element, attrs) {
-      var IMAGE_NOT_FOUND = '/assets/img/image-not-found.<%=version%>.jpg';
+      var IMAGE_NOT_FOUND = '/assets/img/image-not-found.' + window.version + '.jpg';
       scope.$watch(attrs.imageLoading, load);
       function load() {
         element[0].src = '';

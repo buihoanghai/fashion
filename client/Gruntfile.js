@@ -197,7 +197,7 @@ module.exports = function (grunt) {
         expand: true
       },
       release_assets: {
-        src: [ '**' ],
+		src: [ '**' ],
         dest: 'frontend/dist/minified/assets/',
         cwd: 'frontend/source/assets/',
         expand: true,
@@ -283,7 +283,7 @@ module.exports = function (grunt) {
         },
   concat: {
       options: {
-    
+		
         stripBanners: true,
       },
       header: {
@@ -313,7 +313,13 @@ module.exports = function (grunt) {
       },
       footer: {
         options: {
-       
+       process: function (contents, srcpath) {
+						return grunt.template.process(contents, {
+							data: {
+								version: grunt.config('pkg.version')
+							}
+						});
+		},
         },
         files: {
           '<%= concat.footer.dest %>': '<%= concat.footer.dest %>'

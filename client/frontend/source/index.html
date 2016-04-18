@@ -15,6 +15,10 @@
  <div class="container">
     <div ui-view="main"></div>
   </div>
+  
   @@include('grunt_assets/index.scripts.footer.html')
+  <script>
+    window.version = '<%=version%>';
+  </script>
 </body>
 </html>

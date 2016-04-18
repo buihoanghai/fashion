@@ -1,0 +1,10 @@
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+  border: 0;
+  vertical-align: top;
+}
+img:not([src]) {
+  display: none;
+}

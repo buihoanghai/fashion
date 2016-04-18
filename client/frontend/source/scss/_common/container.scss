@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: $container-background-color;
+    top: 15px;
+
+    @media #{$media-xs} {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @media #{$media-sm} {
+        padding: 0;
+        width: 750px;
+    }
+
+    @media #{$media-md} {
+        width: 970px;
+    }
+
+    @media #{$media-lg} {
+        max-width: 1200px;
+        width: 1200px;
+    }
+}
+
+div[ui-view="main"] {
+    background-color: #fff;
+}

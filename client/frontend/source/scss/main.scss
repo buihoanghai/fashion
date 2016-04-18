@@ -1,0 +1,23 @@
+﻿@charset "UTF-8";
+
+$primary-color: #008FAD;
+$secondary-color: #DE6773;
+$link-color: #052B33;
+$success-color: #746456;
+$alert-color: #F00;
+$grey-color: #f1f1f1;
+$red_color: #fe5621;
+$white_color: #ffffff;
+$disable_color: #6D6D6D;
+$button-font-color: #fff;
+$input-prefix-background-color: #f1f1f1;
+$container-background-color: #ffffff;
+$body-background-color: #fff;
+$body-font-color: #99a4ab;
+$body-border-color: #d5d5d5;
+$content-background-color: #fff;
+
+$font-family: 'Roboto', "Georgia", serif;
+$alt-font-family: "PT Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+
+@@include('main-import.scss')

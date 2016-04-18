@@ -1,0 +1,30 @@
+{
+  "name": "fashion",
+  "description": "This website is simple fashion store",
+  "main": "index.html",
+  "authors": [
+    "Hai Bui"
+  ],
+ "licenses": {
+    "type": "All rights reserved"
+  },
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "1.5.2",
+    "angular-ui-router": "0.2.18",
+    "angular-mocks": "1.5.2",
+    "angular-sanitize": "1.5.2",
+    "angular-translate": "~2.11.0",
+    "lodash": "~4.6.1",
+    "fastclick": "~1.0.6"
+  }
+}

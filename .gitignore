@@ -1,0 +1,7 @@
+client/node_modules/
+client/frontend/dist/
+client/frontend/source/grunt_assets/html2js.temp/
+client/frontend/source/grunt_assets/sass.temp/
+client/frontend/source/vendor/bower/
+client/frontend/source/grunt_assets/coverage/
+client/frontend/source/grunt_assets/karma.temp/

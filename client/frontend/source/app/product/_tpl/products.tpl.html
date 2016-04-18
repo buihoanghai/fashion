@@ -1,0 +1,77 @@
+﻿<section id="products">
+  <header>
+    <div class="sorting">
+      <label>Sorting</label>
+      <select ng-model="vm.sorting">
+        <option value=""></option>
+        <option value="price">Price</option>
+        <option value="title">Title </option>
+      </select>
+    </div>
+    <div class="image-size" >
+      <label>Image size</label>
+      <div class="list-icon">
+        <i class="fa fa-align-justify fa-2x"></i>
+        <i class="fa fa-th fa-2x"></i>
+      </div>
+      
+    </div>
+  </header>
+  <main>
+    <ul class="products-grid clear-float">
+      <li class="item col-xs-12 col-sm-3 col-md-2 " ng-repeat="product in vm.products | orderBy:vm.sorting ">
+        <div class="item-backstage hover">
+          <div class="item-wrapper">
+            <div class="product-image-container">
+              <a title="{{::product.title}}" class="product-image image-loading" ratio="1">
+                <img image-loading="product.imageDisplay.url"  alt="{{::product.title}}">
+              </a>
+              <div class="size">
+                <p>AVAILABLE SIZES</p>
+                <p ng-bind="product.displaySize"></p>
+              </div>
+              <ul class="product-thumbs">
+                <li class="product-thumb" ng-repeat="image in product.images" ng-mouseover="vm.setActiveImage(product,image)">
+                  <a href="" ng-class="{'active': image.active}">
+                    <img image-loading="image.thumbnail" alt="">
+                  </a>
+                </li>
+            
+              </ul>
+            </div>
+            <div class="price-box" >
+              <span class="regular-price" >
+                <span class="price">${{::product.price}}</span>
+              </span>
+            </div>
+            <h3 class="product-name">
+              <a href="" title="{{::product.title}}" ng-bind="::product.title">
+              </a>
+            </h3>
+            <div class="brand">
+                <span>Brand: {{::product.brand}}</span>
+            </div>
+            <div class="color">
+              <span>Colors: {{::product.displayColor}}</span>
+            </div>
+            <div class="actions">
+              <div class="ratings">
+                <div class="rating-box">
+                  <span class="rating" style="width: 58%;" ng-style="{'width': product.raiting*20 +'%'}"></span>
+                </div>
+                <span class="rate" ng-bind="'('+product.raiting+')'"></span>
+              </div>
+              <button class="icon-button">
+                <i class="fa fa-heart"></i>
+              </button>
+              <button class="icon-button">
+                <i class="fa fa-copy "></i>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </main>
+</section>

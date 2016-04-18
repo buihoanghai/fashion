@@ -1,0 +1,16 @@
+.translate-cloak {
+  display: none !important;
+}
+
+.transalte-cloak-show {
+  display: none;
+}
+.translate-cloak.transalte-cloak-show {
+  display: block !important;
+  padding: 50px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 400px;
+  margin: 50px auto 0 auto;
+}

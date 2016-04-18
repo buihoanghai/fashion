@@ -1,0 +1,39 @@
+.i18n-highlight {
+  background-color: #0F0;
+  color: #000;
+}
+
+.i18n-highlight--missing {
+  background-color: #F00;
+  color: #FFF;
+}
+
+.i18n-highlight--empty {
+  background-color: #00F;
+  color: #FFF;
+}
+
+.translate-highlight-tooltip {
+  position: fixed;
+  display: none;
+  background-color: #fff;
+  width: 350px;
+  padding: 10px;
+  border: 2px solid #000;
+  // height: 90px;
+  margin-top: -85px;
+  z-index: 2000;
+
+  form, input, button {
+    margin-bottom: 0;
+  }
+}
+
+.translate-highlight-tooltip--active {
+  @extend .translate-highlight-tooltip;
+  display: block;
+}
+
+.translate-highlight-tooltip--active.htmlmode {
+   width: 500px;
+}

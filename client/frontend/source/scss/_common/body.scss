@@ -1,20 +1,31 @@
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &:before, :after {
+        box-sizing: border-box;
+    }
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 body {
-  font-size: 16px;
-  font-family: $font-family;
-  -webkit-font-smoothing: antialiased;
-  color: $body-font-color;
-  background-color: $container-background-color;
-  min-width: 320px;
+    font-size: 16px;
+    font-family: $font-family;
+    -webkit-font-smoothing: antialiased;
+    color: $body-font-color;
+    background-color: $container-background-color;
+    min-width: 320px;
     position: relative;
-        color: #99a4ab;
+    color: #99a4ab;
+    overflow-x: hidden;
 }

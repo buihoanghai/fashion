@@ -130,7 +130,7 @@ button, .button {
 
 @mixin general-button() {
     background-color: $red_color;
-    padding: 8px;
+    padding: 5px;
     border: none;
     color: $white_color;
     height: 35px;
@@ -152,18 +152,17 @@ button, .button {
 .icon-button {
     @include general-button();
     margin-right: 3px;
-    border: 0;
-    border-radius: 0;
+    border: 1px solid #B9B9B9;
+    border-radius: 3px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    width: 80px;
-    height: 47px;
+    width: 40px;
+    height: 30px;
     animation: ripple 0.75s ease-out;
-
-    @media #{$media-xs} {
-        width: 70px;
-    }
+    color: #B9B9B9;
+    padding: 4px;
+    background-color: #fff;
 }
 
 .un-action {

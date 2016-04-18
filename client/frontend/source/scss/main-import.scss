@@ -11,7 +11,7 @@ $white_color: #ffffff;
 $disable_color: #6D6D6D;
 $button-font-color: #fff;
 $input-prefix-background-color: #f1f1f1;
-$container-background-color: darkslategrey;
+$container-background-color: #ffffff;
 $body-background-color: #fff;
 $body-font-color: #99a4ab;
 $body-border-color: #d5d5d5;
@@ -28,16 +28,22 @@ $alt-font-family: "PT Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-se
  @import "_common/a.scss";
  @import "_common/body.scss";
  @import "_common/button.scss";
+ @import "_common/columns.scss";
  @import "_common/container.scss";
  @import "_common/hidden.scss";
  @import "_common/i18n-highlight.scss";
+ @import "_common/image-loading.scss";
  @import "_common/img.scss";
  @import "_common/input-prefix.scss";
  @import "_common/input-suffix.scss";
  @import "_common/input.scss";
  @import "_common/label.scss";
+ @import "_common/ng-cloak.scss";
  @import "_common/translate-cloak.scss";
+ @import "_common/ul-ol.scss";
  @import "font-awesome/font-awesome.scss";
 
-  
+   @import "../app/product/_scss/product.scss";
+ @import "../app/product/_scss/products.scss";
+
  

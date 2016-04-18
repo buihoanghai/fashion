@@ -3,6 +3,7 @@
   apiService.$inject = ['$q', '$http', 'app.apiCache'];
   angular.module('app').service('app.apiService', apiService);
   function apiService($q, $http, apiCache) {
+    var apiUrl = 'http://private-a8bc9-fashionshop.apiary-mock.com/api/';
     var revealed = {
       get: get,
       patch: patch,
@@ -59,7 +60,7 @@
       var deferred = $q.defer();
       var canceler = $q.defer();
       var cache = config.cache ? apiCache : false;
-      url = "api/" + url;
+      url = apiUrl + url;
 
       // $log.debug("API", url, cache);
 

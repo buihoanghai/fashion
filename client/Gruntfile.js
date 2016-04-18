@@ -40,7 +40,7 @@ module.exports = function (grunt) {
     
         },
         files: {
-          'frontend/source/grunt_assets/sass.temp/main.css': 'frontend/source/scss/main.scss'
+          'frontend/source/grunt_assets/sass.temp/main.css': 'frontend/source/scss/main-import.scss'
         }
       },
         },
@@ -52,7 +52,6 @@ module.exports = function (grunt) {
                 src: ["frontend/dist/develop/*"]
             },
 			index_scripts_temp: { src: [ '<%= index_scripts.develop_header.result_dir %>' ] },
-			sass_temp: { src: [ '<%= sass.develop.options.cssDir %>' ] },
 			index_temp: { src: [ 'frontend/source/grunt_assets/index.temp/' ] },
 			  release_full: {
 				src : [ 'frontend/dist/full/*', '!client/dist/full/README.md' ]
@@ -123,6 +122,15 @@ module.exports = function (grunt) {
                 src: ['<%= app_files.js %>'],
                 dest: 'frontend/dist/develop/assets/js/',
                 expand: true,
+				options: {
+                    process: function (contents, srcpath) {
+                        return grunt.template.process(contents, {
+                            data: {
+                                version: grunt.config('pkg.version')
+                            }
+                        });
+                    },
+                },
                 rename: function (dest, src) {
                     var name = src.substring(0, src.lastIndexOf("."));
                     var type = src.substring(src.lastIndexOf(".") + 1);
@@ -528,7 +536,7 @@ module.exports = function (grunt) {
     'clean:index_scripts_temp', 'clean:index_temp'
   ]);
    grunt.registerTask( 'sass_release', [
-   'scss_import', 'sass:release', 'copy:release_css'//, 'clean:sass_temp'
+   'scss_import', 'sass:release', 'copy:release_css'
   ]);
    grunt.registerTask( 'release_full', [
     'clean:release_full', 'develop_core', 'copy:release_full'

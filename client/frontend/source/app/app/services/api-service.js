@@ -13,9 +13,9 @@
       request: request
     };
     var tokenNames = {
-      token: 'FFT-TOKEN',
-      auth: 'FFT-AUTHENTICATED',
-      verifySession: 'FFT-VERIFY-SESSION'
+      token: 'FA-TOKEN',
+      auth: 'FA-AUTHENTICATED',
+      verifySession: 'FA-VERIFY-SESSION'
     };
     var token = null;
     var tokenInitialized = false;
